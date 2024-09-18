@@ -15,30 +15,24 @@
         <div class="nav-left">
             <a href="./homepage.html">Informatie</a>
             
-        <div class="nav-text">
-            <a href="./homepage.html">Hoofdpagina</a>
         </div>
 
         <div class="nav-logo">
             <img src="logo">
         </div>
 
-        <div class="nav-text">
+        <div class="nav-right">
             <a href="./statistiekenpage.html">Statistieken</a>
         </div>
     </nav>
 
-    <header class="header-stats">
     <h1>Statistieken</h1>
-    </header>
 
-    <main class="main-stats">
-        <section class="stats">
-            <div class="generated-energy">
-                <div class="stats-img">
+    <section>
+        <div generated-energy>
+            <div>
                 <img src="img/saving.png" alt="energy">
             </div>
-                <div class="stats-text">
             <div>
                 <p>Opgewekte energie</p>
             </div>
@@ -46,13 +40,11 @@
                 <p>0.2 kWh</p>
             </div>
         </div>
-            </div>
 
-            <div class="consumed-energy">
-                <div class="stats-img">
+        <div consumed-energy>
+            <div>
                 <img src="img/used.jpg" alt="energy">
             </div>
-                <div class="stats-text">
             <div>
                 <p>Verbruikte energie</p>
             </div>
@@ -60,13 +52,11 @@
                 <p>0.1 kWh</p>
             </div>
         </div>
-            </div>
 
-            <div class="sun-hours">
-                <div class="stats-img">
+        <div sun-hours>
+            <div>
                 <img src="img/sunny.jpg" alt="energy">
             </div>
-                <div class="stats-text">
             <div>
                 <p>Zonuren</p>
             </div>
@@ -74,13 +64,11 @@
                 <p>5 uur</p>
             </div>
         </div>
-            </div>
 
-            <div class="best-energy-yield">
-                <div class="stats-img">
+        <div best-energy-yield>
+            <div>
                 <img src="img/energy.png" alt="energy">
             </div>
-                <div class="stats-text">
             <div>
                 <p>Beste energie opbrengst</p>
             </div>
@@ -88,13 +76,11 @@
                 <p>0.45 kWh</p>
             </div>
         </div>
-            </div>
 
-            <div class="euro-saved">
-                <div class="stats-img">
+        <div euro-saved>
+            <div>
                 <img src="img/money.png" alt="energy">
             </div>
-                <div class="stats-text">
             <div>
                 <p>Euro's bespaard</p>
             </div>
@@ -102,28 +88,20 @@
                 <p>8,70 euro</p>
             </div>
         </div>
-            </div>
     </section>
-    </main>
   
 
     <footer>
+        <div class="footer-logo">
+            <img src="logo">
+    
+        </div>
+    
         <div class="footer">
             <a href="#">Instagram</a>
             <a href="#">Twitter</a>
             <a href="#">Facebook</a>
             <a href="#">Contact</a>
-        </div>
-    
-        <div class="footer-logo">
-            <img src="img" alt="logo">
-            <p>Copyright 2024 name</p>
-        </div>
-    
-        <div class="footer">
-            <a href="#">Privacyverklaring</a>
-            <a href="#">Algemene voorwaarden</a>
-            <a href="#">Cookiebeleid</a>
         </div>
     </footer>
 </body>
