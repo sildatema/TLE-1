@@ -41,6 +41,8 @@ mysqli_close($db);
     <nav>
         <div class="nav-left">
             <a href="homepage.php">Informatie</a>
+            <a href="./homepage.html">Informatie</a>
+
         </div>
 
         <div class="nav-logo">
@@ -57,7 +59,7 @@ mysqli_close($db);
     <section>
         <div generated-energy>
             <div>
-                <img src="plaatje">
+                <img src="img/saving.png" alt="energy">
             </div>
             <div>
                 <p>Opgewekte energie</p>
@@ -69,7 +71,7 @@ mysqli_close($db);
 
         <div consumed-energy>
             <div>
-                <img src="plaatje">
+                <img src="img/used.jpg" alt="energy">
             </div>
             <div>
                 <p>Verbruikte energie</p>
@@ -81,7 +83,7 @@ mysqli_close($db);
 
         <div sun-hours>
             <div>
-                <img src="plaatje">
+                <img src="img/sunny.jpg" alt="energy">
             </div>
             <div>
                 <p>Zonuren</p>
@@ -93,7 +95,7 @@ mysqli_close($db);
 
         <div best-energy-yield>
             <div>
-                <img src="plaatje">
+                <img src="img/energy.png" alt="energy">
             </div>
             <div>
                 <p>Beste energie opbrengst</p>
@@ -105,7 +107,7 @@ mysqli_close($db);
 
         <div euro-saved>
             <div>
-                <img src="plaatje">
+                <img src="img/money.png" alt="energy">
             </div>
             <div>
                 <p>Euro's bespaard</p>
