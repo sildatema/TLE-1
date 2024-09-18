@@ -1,3 +1,30 @@
+<?php
+
+/** @var $db */
+require_once "database-connection.php";
+
+$query = "SELECT * FROM tuesday";
+
+$result = mysqli_query($db,$query)
+or die('Error '.mysqli_error($db).' with query '.$query);
+
+$Statistics = [];
+
+while($row = mysqli_fetch_assoc($result))
+{
+    $Statistics = $row;
+}
+$DayOfWeekNumber = date("w");
+print_r("$DayOfWeekNumber");
+print_r($Statistics);
+$energyGenerated= $Statistics['generated-energy'];
+$energyConsumed = $Statistics['consumed-energy'];
+$sunHours = $Statistics['sun-hours'];
+$bestYield = $Statistics['best-energy-yield'];
+$dollarSaved = $Statistics['euro-saved'];
+
+mysqli_close($db);
+?>
 <!doctype html>
 <html lang="en">
 
@@ -13,7 +40,7 @@
 <body>
     <nav>
         <div class="nav-left">
-            <a href="./homepage.html">Informatie</a>
+            <a href="homepage.php">Informatie</a>
         </div>
 
         <div class="nav-logo">
@@ -21,7 +48,7 @@
         </div>
 
         <div class="nav-right">
-            <a href="./statistiekenpage.html">Statistieken</a>
+            <a href="statistiekenpage.php">Statistieken</a>
         </div>
     </nav>
 
@@ -36,7 +63,7 @@
                 <p>Opgewekte energie</p>
             </div>
             <div>
-                <p>0.2 kWh</p>
+                <p><?= $energyGenerated?></p>
             </div>
         </div>
 
@@ -48,7 +75,7 @@
                 <p>Verbruikte energie</p>
             </div>
             <div>
-                <p>0.1 kWh</p>
+                <p><?= $energyConsumed?></p>
             </div>
         </div>
 
@@ -60,7 +87,7 @@
                 <p>Zonuren</p>
             </div>
             <div>
-                <p>5 uur</p>
+                <p><?= $sunHours?></p>
             </div>
         </div>
 
@@ -72,7 +99,7 @@
                 <p>Beste energie opbrengst</p>
             </div>
             <div>
-                <p>0.45 kWh</p>
+                <p><?= $bestYield?></p>
             </div>
         </div>
 
@@ -84,7 +111,7 @@
                 <p>Euro's bespaard</p>
             </div>
             <div>
-                <p>8,70 euro</p>
+                <p><?= $dollarSaved?></p>
             </div>
         </div>
     </section>
