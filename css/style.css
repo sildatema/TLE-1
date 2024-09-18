@@ -1,0 +1,144 @@
+/*alles*/
+body {
+    Margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: #f4f4f4;
+}
+
+a :hover {
+    color: #ffffff;
+}
+
+/*nav*/
+nav {
+    padding: 3vw 20vw;
+    margin: 0;
+    background-color: #282828;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+nav a {
+    color: #a87854;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.nav-text, .nav-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    flex: 1;
+}
+
+.nav-text :hover {
+    color: #b99470;
+}
+
+/*header*/
+header {
+    margin: 0;
+    padding: 4vw 4vw;
+    background-color: #a6b37d;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: solid 2px #282828;
+}
+
+h1 {
+    color: #282828;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+/*main*/
+main {
+    margin: 0;
+    padding: 5vw 15vw;
+    background-color: #ffffff;
+}
+
+#products {
+    display: flex;
+    flex-direction: row;
+}
+
+.product-text {
+    padding: 0vw 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title {
+    margin-top: 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+img {
+    max-height: 30vw;
+}
+
+.soon {
+    margin-bottom: 0;
+    padding: 1vw 2vw;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.25rem;
+    background-color: #a87854;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/*footer*/
+footer {
+    padding: 2vw 2vw;
+    margin: 0;
+    background-color: #282828;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    flex: 3;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+}
+
+footer p {
+    color: #f4f4f4;
+    font-size: 0.9rem;
+}
+
+footer a {
+    margin: 1vw;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+footer a :hover {
+    color: #ffffff;
+}
