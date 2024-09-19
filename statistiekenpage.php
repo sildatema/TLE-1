@@ -1,3 +1,30 @@
+<?php
+
+/** @var $db */
+require_once "database-connection.php";
+
+$query = "SELECT * FROM tuesday";
+
+$result = mysqli_query($db,$query)
+or die('Error '.mysqli_error($db).' with query '.$query);
+
+$Statistics = [];
+
+while($row = mysqli_fetch_assoc($result))
+{
+    $Statistics = $row;
+}
+$DayOfWeekNumber = date("w");
+print_r("$DayOfWeekNumber");
+print_r($Statistics);
+$energyGenerated= $Statistics['generated-energy'];
+$energyConsumed = $Statistics['consumed-energy'];
+$sunHours = $Statistics['sun-hours'];
+$bestYield = $Statistics['best-energy-yield'];
+$dollarSaved = $Statistics['euro-saved'];
+
+mysqli_close($db);
+?>
 <!doctype html>
 <html lang="en">
 
@@ -12,96 +39,116 @@
 
 <body>
     <nav>
-        <div class="nav-left">
-            <a href="./homepage.html">Informatie</a>
-            
+        <div class="nav-text">
+            <a href="./homepage.html">Hoofdpagina</a>
         </div>
 
         <div class="nav-logo">
-            <img src="logo">
+            <img src="img/logo.png" alt="logo">
         </div>
 
-        <div class="nav-right">
-            <a href="./statistiekenpage.html">Statistieken</a>
+        <div class="nav-text">
+            <a href="./statistiekenpage.php">Statistieken</a>
         </div>
     </nav>
 
-    <h1>Statistieken</h1>
+    <header class="header-stats">
+        <h1>Statistieken</h1>
+    </header>
 
-    <section>
-        <div generated-energy>
-            <div>
-                <img src="img/saving.png" alt="energy">
+    <main class="main-stats">
+        <section class="stats">
+            <div class="generated-energy">
+                <div class="stats-img">
+                    <img src="img/saving.png" alt="energy">
+                </div>
+                <div class="stats-text">
+                    <div>
+                        <p>Opgewekte energie</p>
+                    </div>
+                    <div>
+                        <p><?= $energyGenerated?></p>
+                    </div>
+                </div>
             </div>
-            <div>
-                <p>Opgewekte energie</p>
-            </div>
-            <div>
-                <p>0.2 kWh</p>
-            </div>
-        </div>
 
-        <div consumed-energy>
-            <div>
-                <img src="img/used.jpg" alt="energy">
+            <div class="consumed-energy">
+                <div class="stats-img">
+                    <img src="img/used.png" alt="energy">
+                </div>
+                <div class="stats-text">
+                    <div>
+                        <p>Verbruikte energie</p>
+                    </div>
+                    <div>
+                        <p><?= $energyConsumed?></p>
+                    </div>
+                </div>
             </div>
-            <div>
-                <p>Verbruikte energie</p>
-            </div>
-            <div>
-                <p>0.1 kWh</p>
-            </div>
-        </div>
 
-        <div sun-hours>
-            <div>
-                <img src="img/sunny.jpg" alt="energy">
+            <div class="sun-hours">
+                <div class="stats-img">
+                    <img src="img/sun.png" alt="energy">
+                </div>
+                <div class="stats-text">
+                    <div>
+                        <p>Zonuren</p>
+                    </div>
+                    <div>
+                        <p><?= $sunHours?></p>
+                    </div>
+                </div>
             </div>
-            <div>
-                <p>Zonuren</p>
-            </div>
-            <div>
-                <p>5 uur</p>
-            </div>
-        </div>
 
-        <div best-energy-yield>
-            <div>
-                <img src="img/energy.png" alt="energy">
+            <div class="best-energy-yield">
+                <div class="stats-img">
+                    <img src="img/energy.png" alt="energy">
+                </div>
+                <div class="stats-text">
+                    <div>
+                        <p>Beste energie opbrengst</p>
+                    </div>
+                    <div>
+                        <p><?= $bestYield?></p>
+                    </div>
+                </div>
             </div>
-            <div>
-                <p>Beste energie opbrengst</p>
-            </div>
-            <div>
-                <p>0.45 kWh</p>
-            </div>
-        </div>
 
-        <div euro-saved>
-            <div>
-                <img src="img/money.png" alt="energy">
+            <div class="euro-saved">
+                <div class="stats-img">
+                    <img src="img/money.png" alt="energy">
+                </div>
+                <div class="stats-text">
+                    <div>
+                        <p>Euro's bespaard</p>
+                    </div>
+                    <div>
+                        <p><?= $dollarSaved?></p>
+                    </div>
+                </div>
             </div>
-            <div>
-                <p>Euro's bespaard</p>
-            </div>
-            <div>
-                <p>8,70 euro</p>
-            </div>
-        </div>
     </section>
+    </main>
   
 
     <footer>
-        <div class="footer-logo">
-            <img src="logo">
-    
-        </div>
-    
         <div class="footer">
             <a href="#">Instagram</a>
             <a href="#">Twitter</a>
             <a href="#">Facebook</a>
             <a href="#">Contact</a>
+        </div>
+
+        <div class="footer-logo">
+            <div>
+                <img src="img/logo.png" alt="logo" class="picture">
+            </div>
+        </div>
+
+        <div class="footer">
+            <a href="#">Privacyverklaring</a>
+            <a href="#">Algemene voorwaarden</a>
+            <a href="#">Cookiebeleid</a>
         </div>
     </footer>
 </body>

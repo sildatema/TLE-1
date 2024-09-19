@@ -9,9 +9,13 @@ a {
     text-decoration: none;
 }
 
+.picture {
+    height: 4vw;
+}
+
 /*nav*/
 nav {
-    padding: 3vw 20vw;
+    padding: 2vw 20vw;
     margin: 0;
     background-color: #282828;
     display: flex;
@@ -23,9 +27,13 @@ nav a {
     color: #a87854;
     font-weight: bold;
     font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-.nav-text, .nav-logo {
+.nav-text,
+.nav-logo {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -33,7 +41,7 @@ nav a {
     flex: 1;
 }
 
-.nav-text :hover {
+.nav a :hover {
     color: #b99470;
 }
 
@@ -41,7 +49,10 @@ nav a {
 .header-home {
     margin: 0;
     padding: 4vw 4vw;
-    background:url(img/background.png);
+    background-image: url(../img/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -56,8 +67,12 @@ nav a {
     justify-content: center;
 }
 
-h1 {
+.header-stats h1 {
     color: #282828;
+}
+
+h1 {
+    color: #a6b37d;
     font-weight: bold;
     font-size: 3rem;
 }
@@ -71,7 +86,7 @@ h1 {
 
 .main-stats {
     margin: 0;
-    padding: 5vw 15vw;
+    padding: 0vw 15vw 5vw 15vw;
 }
 
 #products {
@@ -109,7 +124,7 @@ img {
 }
 
 .stats {
-    background-color: #c0c78c;
+    background-color: #a6b37d;
     border: solid 2px #282828;
     border-radius: 5px;
 }
@@ -123,11 +138,19 @@ img {
     flex-direction: row;
     justify-content: space-between;
     flex: 1;
-    border-bottom: solid 1px #a6b37d;
+    border-bottom: solid 1px #8c9768;
 }
 
 .stats-img {
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     flex: 1;
+}
+
+.stats-img img {
+    width: 7.5vw;
 }
 
 .stats-text {
@@ -138,6 +161,14 @@ img {
     flex: 1;
 }
 
+.stats-text p {
+    padding: 1vw;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 /*footer*/
 footer {
     padding: 2vw 2vw;
@@ -145,7 +176,6 @@ footer {
     background-color: #282828;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
 }
 
 .footer {
