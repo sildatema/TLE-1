@@ -2,8 +2,10 @@
 
 /** @var $db */
 require_once "database-connection.php";
+$DayOfWeek = date("N");
 
-$query = "SELECT * FROM tuesday";
+$query = "SELECT * FROM stats WHERE id = $DayOfWeek";
+
 
 $result = mysqli_query($db,$query)
 or die('Error '.mysqli_error($db).' with query '.$query);
@@ -13,10 +15,8 @@ $Statistics = [];
 while($row = mysqli_fetch_assoc($result))
 {
     $Statistics = $row;
+
 }
-$DayOfWeekNumber = date("w");
-print_r("$DayOfWeekNumber");
-print_r($Statistics);
 $energyGenerated= $Statistics['generated-energy'];
 $energyConsumed = $Statistics['consumed-energy'];
 $sunHours = $Statistics['sun-hours'];
